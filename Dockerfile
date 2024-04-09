@@ -24,8 +24,8 @@ ARG TAVILY_API_KEY
 ENV OPENAI_API_KEY=${OPENAI_API_KEY}
 ENV TAVILY_API_KEY=${TAVILY_API_KEY}
 
-# Inform Docker that the container listens on port 3000
+# Inform Docker that the container listens on port
 EXPOSE $PORT
 
 # Command to run the app
-CMD ["bun", "dev"]
+CMD ["bun", "dev", "--port", "$PORT"]
